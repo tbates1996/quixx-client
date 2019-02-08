@@ -1,0 +1,11 @@
+<div id="wrapper">
+	<div>
+		<input type="text" placeholder="Game Name" name="gamename" [(ngModel)]="gamename">
+	</div>
+	<div>
+		<input type="text" placeholder="Username" name="username" [(ngModel)]="username">
+	</div>
+	<button (click)="createNewGame()">Create Game</button>
+	<button routerLink="/lobby">Back</button>
+
+</div>
