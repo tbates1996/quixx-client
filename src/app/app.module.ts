@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { NewGameComponent } from './new-game/new-game.component';
 import { FormsModule } from '@angular/forms';
 import { GameComponent } from './game/game.component';
+import { UserComponent } from './user/user.component';
+import { JoinGameComponent } from './join-game/join-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
 		GamesComponent,
 		NewGameComponent,
-		GameComponent
+		GameComponent,
+		UserComponent,
+		JoinGameComponent
   ],
   imports: [
     BrowserModule,

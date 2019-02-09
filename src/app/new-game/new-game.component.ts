@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import {RequestOptions, Request, RequestMethod} from '@angular/http';
 import {Router} from "@angular/router"
+import { UserService } from '../user/user.service';
+import { GameService } from '../game/game.service';
 
 @Component({
   selector: 'app-new-game',
@@ -14,7 +16,8 @@ export class NewGameComponent implements OnInit {
 	gamename: string;
 	username: string;
 
-  constructor(private router: Router, private http: HttpClient) { }
+	constructor(private router: Router, private http: HttpClient,private userService: UserService,
+	            private gameService: GameService ) { }
 
   ngOnInit() {
   }
@@ -34,6 +37,8 @@ export class NewGameComponent implements OnInit {
 		.subscribe(
             data => {
               console.log("POST Request is successful ", data);
+							this.userService.setUsername(this.username);
+							this.gameService.gid = data;
 							this.router.navigate(['/game',data]);
 						},
             error => {

@@ -7,22 +7,26 @@ export class SocketService {
 
 	private socket: WebSocket;
 	private listener: EventEmitter<any> = new EventEmitter();
+  private gid: string;
 
 	constructor() { 
-				this.socket = new WebSocket("ws://localhost:8000/ws");
-        this.socket.onopen = event => {
-            this.listener.emit({"type": "open", "data": event});
-        }
-        this.socket.onclose = event => {
-					  console.log("Closed");
-            this.listener.emit({"type": "close", "data": event});
-        }
-        this.socket.onmessage = event => {
-					  let data = JSON.parse(event.data)
-					  console.log(event);
-					  console.log(data);
-            this.listener.emit({"type": "message", "data": JSON.parse(event.data)});
-        }
+				
+	}
+
+	public init(id: string){
+		this.socket = new WebSocket("ws://localhost:8000/ws/?gid=" + id);
+		this.socket.onopen = event => {
+				this.listener.emit({"type": "open", "data": event});
+		}
+		this.socket.onclose = event => {
+				console.log("Closed");
+				this.listener.emit({"type": "close", "data": event});
+		}
+		this.socket.onmessage = event => {
+				let data = JSON.parse(event.data)
+				console.log(data);
+				this.listener.emit({"type": "message", "data": JSON.parse(event.data)});
+		}
 	}
 
 	public send(data: string) {

@@ -3,7 +3,7 @@
 <button routerLink="/newGame" class="create-button">Create Game</button>
 <div *ngFor="let game of games" class="game-box">
     {{ game.name }}
-		<button class='join-button' [routerLink]="['/game', game.id]">Join</button>
+		<button class='join-button' (click)="joinGame(game.id)" >Join</button>
 </div>
 </div>
 
