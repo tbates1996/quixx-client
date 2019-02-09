@@ -44,6 +44,10 @@ export class GameComponent implements OnInit {
     });
   }
 
+	public getReady() { 
+		this.socket.send(JSON.stringify({'type': 'ready'}));
+	}
+
   ngOnDestroy() {
 		console.log("Destroyed");
     this.sub.unsubscribe();

@@ -1,8 +1,5 @@
-<p>
-game works!{{id}}
-</p>
 <div *ngFor="let user of users" >
-    {{ user }}
+	{{ user.username }}   is ready {{user.ready}}
 </div>
-	<app-user></app-user>
+	<button (click)=getReady()>Ready</button>
 <button [routerLink]="['/']">Home</button>

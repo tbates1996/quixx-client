@@ -22,28 +22,20 @@ export class NewGameComponent implements OnInit {
   ngOnInit() {
   }
 
-		/*options = new RequestOptions({
-		method: RequestMethod.Post,
-		headers: {
-			'Content-type' : 'application/json'
-		}
-	});	
-
-  */
 	createNewGame(){
 		console.log(this.gamename);
 		console.log(this.username);
 		this.http.post(`${environment.serverUrl}/createGame`,{ 'name': this.gamename})
 		.subscribe(
-            data => {
-              console.log("POST Request is successful ", data);
-							this.userService.setUsername(this.username);
-							this.gameService.gid = data;
-							this.router.navigate(['/game',data]);
-						},
-            error => {
-                console.log("Error", error);
-            }
+				data => {
+					console.log("POST Request is successful ", data);
+					this.userService.setUsername(this.username);
+					this.gameService.gid =<string>data;
+					this.router.navigate(['/game',data]);
+				},
+				error => {
+						console.log("Error", error);
+				}
     );          
 	}
 }
