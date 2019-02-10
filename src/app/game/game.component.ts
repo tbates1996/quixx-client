@@ -50,7 +50,6 @@ export class GameComponent implements OnInit {
 						}
 				} 
         if(event.type == "close") {
-            this.users.push("/The socket connection has been closed");
         }
         if(event.type == "open") {
 					console.log("Sending join for  (" + this.id + "): " + this.userService.username);
