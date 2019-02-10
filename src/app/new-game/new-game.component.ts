@@ -25,7 +25,7 @@ export class NewGameComponent implements OnInit {
 	createNewGame(){
 		console.log(this.gamename);
 		console.log(this.username);
-		this.http.post(`${environment.serverUrl}/createGame`,{ 'name': this.gamename})
+		this.http.post(`http://${environment.serverUrl}/createGame`,{ 'name': this.gamename})
 		.subscribe(
 				data => {
 					console.log("POST Request is successful ", data);

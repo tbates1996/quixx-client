@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 export const environment = {
   production: false,
-  serverUrl: 'http://localhost:8000'
+  serverUrl: 'localhost:8000'
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

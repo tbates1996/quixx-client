@@ -19,6 +19,6 @@ export class GamesService {
 	}
 
 	getGames(){ 
-		return this.http.get(`${environment.serverUrl}`)
+		return this.http.get("http://" + environment.serverUrl);
 	}	
 }
