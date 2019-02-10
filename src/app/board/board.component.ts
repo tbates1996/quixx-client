@@ -19,9 +19,7 @@ export class BoardComponent implements OnInit {
   }
   
 	public sendAction(row: number, col: number){
-		console.log("Sending: " + row + ", " col);
 		this.socket.send(JSON.stringify({'type': 'action', 'msg': {'row': row, 'col':col}}));
-		
 	}
 
 }
