@@ -1,0 +1,22 @@
+.currentUser{
+	color: #edb10b;
+}
+
+
+.username{
+	display: inline-block;
+	margin-right: 40px;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.ready{
+ background-color:green;
+}
+.notReady { 
+ background-color:red;
+}

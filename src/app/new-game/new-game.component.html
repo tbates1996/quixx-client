@@ -1,11 +1,17 @@
-<div id="wrapper">
-	<div>
-		<input type="text" placeholder="Game Name" name="gamename" [(ngModel)]="gamename">
+<div class="container-fluid">
+	<div class="col-md-2">
 	</div>
-	<div>
-		<input type="text" placeholder="Username" name="username" [(ngModel)]="username">
+	<div class="col-md-8">
+		<div class="form-group">
+			<label>Game Name</label>
+			<input type="text" placeholder="Game Name" name="gamename" class="form-control"[(ngModel)]="gamename">
+		</div>
+		<div class="form-group">
+			<label>Username</label>
+			<input type="text" placeholder="Username" name="username" class="form-control" [(ngModel)]="username">
+		</div>
+		<button (click)="createNewGame()" class="btn btn-quixx">Create Game</button>
+		<button routerLink="/lobby" class="btn btn-quixx">Back</button>
 	</div>
-	<button (click)="createNewGame()">Create Game</button>
-	<button routerLink="/lobby">Back</button>
 
 </div>

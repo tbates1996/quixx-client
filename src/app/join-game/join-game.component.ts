@@ -19,6 +19,6 @@ export class JoinGameComponent implements OnInit {
 
 	public joinGame(){
 	  this.userService.username = this.username;	
-		this.router.navigate(['/game',"lskdfjlskdfj"]);
+		this.router.navigate(['/game']);
 	}
 }

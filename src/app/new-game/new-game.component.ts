@@ -31,7 +31,7 @@ export class NewGameComponent implements OnInit {
 					console.log("POST Request is successful ", data);
 					this.userService.setUsername(this.username);
 					this.gameService.gid =<string>data;
-					this.router.navigate(['/game',data]);
+					this.router.navigate(['/game']);
 				},
 				error => {
 						console.log("Error", error);

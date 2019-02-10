@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SocketService } from '../socket.service'
+import { Client } from '../shared/models/client.model';
 
 @Component({
   selector: 'app-user',
@@ -7,6 +8,8 @@ import { SocketService } from '../socket.service'
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+	
+	@Input() user: Client;
 
 	constructor(private socket: SocketService) {}
 

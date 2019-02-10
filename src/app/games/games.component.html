@@ -1,6 +1,5 @@
-<h1 id="qwixx-title">QWIXX</h1>
 <div id='games'>
-<button routerLink="/newGame" class="create-button">Create Game</button>
+<button routerLink="/newGame" class="create-button btn">Create Game</button>
 <div *ngFor="let game of games" class="game-box">
     {{ game.name }}
 		<button class='join-button' (click)="joinGame(game.id)" >Join</button>

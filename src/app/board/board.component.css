@@ -1,0 +1,71 @@
+.crossed {
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='black' stroke-width='3'/><path d='M0 0 L100 100 ' stroke='black' stroke-width='3'/></svg>");
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size: 100% 100%, auto;
+	width:40px;
+	height:40px;
+}
+.card{
+	width:640px;
+	background-color: #b7b7b7;
+	padding: 5px;
+}
+.redRow{
+	background-color:#E53F30;
+}
+.yellowRow{
+	background-color:#F9C841;
+}
+.greenRow{
+	background-color:#4AA954;
+}
+.blueRow{
+	background-color:#386BA0;
+}
+.whiteBox{
+	display:inline-block;
+	width: 40px;
+	height:40px;
+	margin:5px;
+	font-size: 2em;
+	background-color: white;
+}
+.redBox{
+	display:inline-block;
+	width: 40px;
+	height:40px;
+	margin:5px;
+	color: #E53F30;
+	font-size: 2em;
+	background-color: #F4C6C8;
+}
+
+.yellowBox{
+	display:inline-block;
+	width: 40px;
+	height:40px;
+	margin:5px;
+	color: #F9C841; 
+	font-size: 2em;
+	background-color: #F9F8CC;
+}
+
+.greenBox{
+	display:inline-block;
+	width: 40px;
+	height:40px;
+	margin:5px;
+	color: #4AA954;
+	font-size: 2em;
+	background-color: #EBF5E9;
+}
+.blueBox{
+	display:inline-block;
+	width: 40px;
+	height:40px;
+	margin:5px;
+	color: #386BA0;
+	font-size: 2em;
+	background-color: #D7D6EB;
+}

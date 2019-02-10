@@ -1,0 +1,24 @@
+.dieBox{
+	background-color: #fff3d3;
+	width: 50%;
+}
+
+.die{
+	font-size:1.5em;
+	margin:5px;
+}
+.redDie{
+	color: #E53F30;
+}
+
+.yellowDie{
+	color: #F9C841;
+}
+
+.greenDie{
+	color: #4AA954;
+}
+
+.blueDie {
+	color: #386BA0;
+}

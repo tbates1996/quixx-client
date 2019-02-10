@@ -1,1 +1,6 @@
-
+<h3 class="username" [class.currentUser]="user.currentTurn">{{user.username}}</h3> 
+<span class="dot" [ngClass]="{
+	'ready' : user.ready, 
+	'notReady': !user.ready
+	}"></span>
+<app-board [board]="user.board"></app-board>

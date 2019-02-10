@@ -1,8 +1,13 @@
-<div id="wrapper">
-	<div>
-		<input type="text" placeholder="Username" name="username" [(ngModel)]="username">
+<div class="container-fluid">
+	<div class="col-md-2">
 	</div>
-	<button (click)="joinGame()">Join Game</button>
-	<button routerLink="/lobby">Back</button>
+	<div class="col-md-8">
 
+		<div class="form-group">
+			<label>Username</label>
+			<input type="text" placeholder="Username" name="username" [(ngModel)]="username" class="form-control">
+		</div>
+		<button (click)="joinGame()" class="btn btn-quixx">Join Game</button>
+		<button routerLink="/lobby" class="btn btn-quixx">Back</button>
+	</div>
 </div>
