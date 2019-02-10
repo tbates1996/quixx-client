@@ -8,7 +8,7 @@ import { GameService } from '../game/game.service';
 })
 export class DieComponent implements OnInit {
 
-  constructor(private gameService: GameService) { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit() {
   }

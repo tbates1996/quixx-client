@@ -12,7 +12,7 @@ export class BoardComponent implements OnInit {
 
 	@Input() board: Board;
 
-  constructor(private socket: SocketService, private gameService: GameService) { }
+  constructor(private socket: SocketService, public gameService: GameService) { }
 
   ngOnInit() {
 		console.log(this.board);

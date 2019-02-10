@@ -19,7 +19,7 @@ export class GameComponent implements OnInit {
 	col: number;
 
 	constructor(private route: ActivatedRoute,private socket : SocketService, private userService: UserService,
-	            private gameService: GameService, private router: Router) { }
+	            public gameService: GameService, private router: Router) { }
 
 	private sock_sub: Subscription;
 	ngOnInit() {

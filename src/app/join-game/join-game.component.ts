@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class JoinGameComponent implements OnInit {
 
-	private username: string;
+	public username: string;
 
   constructor(private router: Router,private gameService: GameService, private userService: UserService) { }
 
