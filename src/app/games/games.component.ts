@@ -20,6 +20,13 @@ export class GamesComponent implements OnInit {
 			console.log(res);
 		});
   }
+	
+	public refresh() {
+		this.gs.getGames().subscribe((res: any[]) => {
+			this.games = res;
+			console.log(res);
+		});
+	}
 
 	public joinGame(id: string){
 		this.gameService.gid = id;

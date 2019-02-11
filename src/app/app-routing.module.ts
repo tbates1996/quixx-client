@@ -6,10 +6,9 @@ import { GameComponent } from './game/game.component';
 import { JoinGameComponent } from './join-game/join-game.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/lobby', pathMatch: 'full' },	
+	{ path: '', component: GamesComponent },	
 	{ path: 'newGame', component: NewGameComponent },
 	{ path: 'joinGame', component: JoinGameComponent },
-	{ path: 'lobby', component: GamesComponent },
 	{ path: 'game', component: GameComponent }
 ];
 
