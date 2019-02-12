@@ -4,4 +4,7 @@
 	'notReady': !user.ready
 	}"></span>
 <app-board [board]="user.board"></app-board>
-<h5>{{user.score}}<h5>
+
+<div *ngIf="gameService.game.finished">
+	<h4>Score: {{user.score}}</h4>
+</div>
