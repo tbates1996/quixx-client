@@ -28,6 +28,10 @@ export class SocketService {
 				console.log(data);
 				this.listener.emit({"type": "message", "data": JSON.parse(event.data)});
 		}
+		this.socket.onerror = event => {
+			console.log("Error connecting to socket");
+			this.listener.emit({"type": "error", "data": event });
+		}
 	}
 
 	public send(data: string) {

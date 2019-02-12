@@ -42,19 +42,17 @@ export class GameComponent implements OnInit {
 						if(data.type == "waiting"){
 							this.gameService.game = data.msg;
 						}
-						else if(data.type == "playing"){
-						
-						}
-						else if(data.type == "finished"){
-						
+						else if(data.type == "error") {
+							this.router.navigate(['']);
 						}
 				} 
-        if(event.type == "close") {
+				if(event.type == "close") {
+				  this.router.navigate(['']);	
         }
         if(event.type == "open") {
 					console.log("Sending join for  (" + this.id + "): " + this.userService.username);
 					this.socket.send(JSON.stringify({'type': 'join', 'msg': {'username': this.userService.username } }));
-        }
+				}
     });
   }
 
