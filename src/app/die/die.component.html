@@ -1,28 +1,36 @@
 <div class="dieBox">
-	<div *ngIf="!gameService.game.die.redLock">
-		<div class="redDie die">
-			Red: {{gameService.game.die.red}}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">
+				<div *ngIf="!gameService.game.die.redLock">
+					<div class="redDie die">
+						Red: {{gameService.game.die.red}}
+					</div>
+				</div>
+				<div *ngIf="!gameService.game.die.blueLock">
+					<div class="blueDie die">
+						Blue: {{gameService.game.die.blue}}
+					</div>
+				</div>
+				<div *ngIf="!gameService.game.die.yellowLock">
+					<div class="yellowDie die">
+						Yellow: {{gameService.game.die.yellow}}
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div *ngIf="!gameService.game.die.greenLock">
+					<div class="greenDie die">
+						Green: {{ gameService.game.die.green}}
+					</div>
+				</div>
+				<div class="die">
+					White 1: {{ gameService.game.die.white1}}
+				</div>
+				<div class="die">
+					White 2: {{ gameService.game.die.white2}}
+				</div>
+			</div>
 		</div>
-	</div>
-	<div *ngIf="!gameService.game.die.blueLock">
-		<div class="blueDie die">
-			Blue: {{gameService.game.die.blue}}
-		</div>
-	</div>
-	<div *ngIf="!gameService.game.die.yellowLock">
-		<div class="yellowDie die">
-			Yellow: {{gameService.game.die.yellow}}
-		</div>
-	</div>
-	<div *ngIf="!gameService.game.die.greenLock">
-		<div class="greenDie die">
-			Green: {{ gameService.game.die.green}}
-		</div>
-	</div>
-	<div class="die">
-		White 1: {{ gameService.game.die.white1}}
-	</div>
-	<div class="die">
-		White 2: {{ gameService.game.die.white2}}
 	</div>
 </div>
