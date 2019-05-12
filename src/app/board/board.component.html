@@ -1,292 +1,286 @@
-	<div *ngIf="gameService.game.started && !gameService.game.finished">
-		<div class="card">
-			<div class="container-fluid">
-				<div class="row redRow">
-					<div class="col-md-12">
-						<div class="redBox text-center"  (click)=sendAction(0,0)>	
-							<div [class.crossed]="board.rows[0][0] == 1">
-								2
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,1)>
-							<div [class.crossed]="board.rows[0][1] == 1">
-								3
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,2)>	
-							<div [class.crossed]="board.rows[0][2] == 1">
-								4	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,3)>
-							<div [class.crossed]="board.rows[0][3] == 1">
-								5	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,4)>	
-							<div [class.crossed]="board.rows[0][4] == 1">
-								6	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,5)>
-							<div [class.crossed]="board.rows[0][5] == 1">
-								7	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,6)>	
-							<div [class.crossed]="board.rows[0][6] == 1">
-								8	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,7)>
-							<div [class.crossed]="board.rows[0][7] == 1">
-								9	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,8)>
-							<div [class.crossed]="board.rows[0][8] == 1">
-								10	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,9)>	
-							<div [class.crossed]="board.rows[0][9] == 1">
-								11	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,10)>
-							<div [class.crossed]="board.rows[0][10] == 1">
-								12	
-							</div>
-						</div>
-						<div class="redBox text-center" (click)=sendAction(0,11)>
-							<div [class.crossed]="board.rows[0][11] == 1">
-								L	
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row yellowRow">
-					<div class="col-md-12">
-						<div class="yellowBox text-center" (click)=sendAction(1,0)>	
-							<div [class.crossed]="board.rows[1][0] == 1">
-								2
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,1)>
-							<div [class.crossed]="board.rows[1][1] == 1">
-								3
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,2)>	
-							<div [class.crossed]="board.rows[1][2] == 1">
-								4	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,3)>
-							<div [class.crossed]="board.rows[1][3] == 1">
-								5	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,4)>	
-							<div [class.crossed]="board.rows[1][4] == 1">
-								6	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,5)>
-							<div [class.crossed]="board.rows[1][5] == 1">
-								7	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,6)>	
-							<div [class.crossed]="board.rows[1][6] == 1">
-								8	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,7)>
-							<div [class.crossed]="board.rows[1][7] == 1">
-								9	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,8)>
-							<div [class.crossed]="board.rows[1][8] == 1">
-								10	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,9)>	
-							<div [class.crossed]="board.rows[1][9] == 1">
-								11	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,10)>
-							<div [class.crossed]="board.rows[1][10] == 1">
-								12	
-							</div>
-						</div>
-						<div class="yellowBox text-center" (click)=sendAction(1,11)>
-							<div [class.crossed]="board.rows[1][11] == 1">
-								L	
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row greenRow">
-					<div class="col-md-12">
-						<div class="greenBox text-center" (click)=sendAction(2,0)>	
-							<div [class.crossed]="board.rows[2][0] == 1">
-								12
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,1)>
-							<div [class.crossed]="board.rows[2][1] == 1">
-								11
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,2)>	
-							<div [class.crossed]="board.rows[2][2] == 1">
-								10
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,3)>
-							<div [class.crossed]="board.rows[2][3] == 1">
-								9
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,4)>	
-							<div [class.crossed]="board.rows[2][4] == 1">
-								8	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,5)>
-							<div [class.crossed]="board.rows[2][5] == 1">
-								7	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,6)>	
-							<div [class.crossed]="board.rows[2][6] == 1">
-								6	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,7)>
-							<div [class.crossed]="board.rows[2][7] == 1">
-								5	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,8)>
-							<div [class.crossed]="board.rows[2][8] == 1">
-								4	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,9)>	
-							<div [class.crossed]="board.rows[2][9] == 1">
-								3	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,10)>
-							<div [class.crossed]="board.rows[2][10] == 1">
-								2	
-							</div>
-						</div>
-						<div class="greenBox text-center" (click)=sendAction(2,11)>
-							<div [class.crossed]="board.rows[2][11] == 1">
-								L	
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row blueRow">
-					<div class="col-md-12">
-						<div class="blueBox text-center" (click)=sendAction(3,0)>	
-							<div [class.crossed]="board.rows[3][0] == 1">
-								12
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,1)>
-							<div [class.crossed]="board.rows[3][1] == 1">
-								11
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,2)>	
-							<div [class.crossed]="board.rows[3][2] == 1">
-								10
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,3)>
-							<div [class.crossed]="board.rows[3][3] == 1">
-								9
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,4)>	
-							<div [class.crossed]="board.rows[3][4] == 1">
-								8	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,5)>
-							<div [class.crossed]="board.rows[3][5] == 1">
-								7	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,6)>	
-							<div [class.crossed]="board.rows[3][6] == 1">
-								6	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,7)>
-							<div [class.crossed]="board.rows[3][7] == 1">
-								5	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,8)>
-							<div [class.crossed]="board.rows[3][8] == 1">
-								4	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,9)>	
-							<div [class.crossed]="board.rows[3][9] == 1">
-								3	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,10)>
-							<div [class.crossed]="board.rows[3][10] == 1">
-								2	
-							</div>
-						</div>
-						<div class="blueBox text-center" (click)=sendAction(3,11)>
-							<div [class.crossed]="board.rows[3][11] == 1">
-								L
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="whiteBox text-center" (click)=sendAction(4,0)>
-							<div [class.crossed]="board.rows[4][0] == 1">
-							</div>
-						</div>
-						<div class="whiteBox text-center" (click)=sendAction(4,1)>
-							<div [class.crossed]="board.rows[4][1] == 1">
-							</div>
-						</div>
-						<div class="whiteBox text-center" (click)=sendAction(4,2)>
-							<div [class.crossed]="board.rows[4][2] == 1">
-							</div>
-						</div>
-						<div class="whiteBox text-center" (click)=sendAction(4,3)>
-							<div [class.crossed]="board.rows[4][3] == 1">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div *ngIf="gameService.game.started && !gameService.game.finished">
+  <div class="card">
+    <div class="container-fluid">
+      <div class="row redRow">
+        <div class="col-md-12">
+          <div class="redBox text-center" (click)="sendAction(0, 0)">
+            <div [class.crossed]="board.rows[0][0] == 1">
+              2
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 1)">
+            <div [class.crossed]="board.rows[0][1] == 1">
+              3
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 2)">
+            <div [class.crossed]="board.rows[0][2] == 1">
+              4
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 3)">
+            <div [class.crossed]="board.rows[0][3] == 1">
+              5
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 4)">
+            <div [class.crossed]="board.rows[0][4] == 1">
+              6
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 5)">
+            <div [class.crossed]="board.rows[0][5] == 1">
+              7
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 6)">
+            <div [class.crossed]="board.rows[0][6] == 1">
+              8
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 7)">
+            <div [class.crossed]="board.rows[0][7] == 1">
+              9
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 8)">
+            <div [class.crossed]="board.rows[0][8] == 1">
+              10
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 9)">
+            <div [class.crossed]="board.rows[0][9] == 1">
+              11
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 10)">
+            <div [class.crossed]="board.rows[0][10] == 1">
+              12
+            </div>
+          </div>
+          <div class="redBox text-center" (click)="sendAction(0, 11)">
+            <div [class.crossed]="board.rows[0][11] == 1">
+              L
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row yellowRow">
+        <div class="col-md-12">
+          <div class="yellowBox text-center" (click)="sendAction(1, 0)">
+            <div [class.crossed]="board.rows[1][0] == 1">
+              2
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 1)">
+            <div [class.crossed]="board.rows[1][1] == 1">
+              3
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 2)">
+            <div [class.crossed]="board.rows[1][2] == 1">
+              4
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 3)">
+            <div [class.crossed]="board.rows[1][3] == 1">
+              5
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 4)">
+            <div [class.crossed]="board.rows[1][4] == 1">
+              6
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 5)">
+            <div [class.crossed]="board.rows[1][5] == 1">
+              7
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 6)">
+            <div [class.crossed]="board.rows[1][6] == 1">
+              8
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 7)">
+            <div [class.crossed]="board.rows[1][7] == 1">
+              9
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 8)">
+            <div [class.crossed]="board.rows[1][8] == 1">
+              10
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 9)">
+            <div [class.crossed]="board.rows[1][9] == 1">
+              11
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 10)">
+            <div [class.crossed]="board.rows[1][10] == 1">
+              12
+            </div>
+          </div>
+          <div class="yellowBox text-center" (click)="sendAction(1, 11)">
+            <div [class.crossed]="board.rows[1][11] == 1">
+              L
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row greenRow">
+        <div class="col-md-12">
+          <div class="greenBox text-center" (click)="sendAction(2, 0)">
+            <div [class.crossed]="board.rows[2][0] == 1">
+              12
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 1)">
+            <div [class.crossed]="board.rows[2][1] == 1">
+              11
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 2)">
+            <div [class.crossed]="board.rows[2][2] == 1">
+              10
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 3)">
+            <div [class.crossed]="board.rows[2][3] == 1">
+              9
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 4)">
+            <div [class.crossed]="board.rows[2][4] == 1">
+              8
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 5)">
+            <div [class.crossed]="board.rows[2][5] == 1">
+              7
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 6)">
+            <div [class.crossed]="board.rows[2][6] == 1">
+              6
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 7)">
+            <div [class.crossed]="board.rows[2][7] == 1">
+              5
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 8)">
+            <div [class.crossed]="board.rows[2][8] == 1">
+              4
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 9)">
+            <div [class.crossed]="board.rows[2][9] == 1">
+              3
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 10)">
+            <div [class.crossed]="board.rows[2][10] == 1">
+              2
+            </div>
+          </div>
+          <div class="greenBox text-center" (click)="sendAction(2, 11)">
+            <div [class.crossed]="board.rows[2][11] == 1">
+              L
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row blueRow">
+        <div class="col-md-12">
+          <div class="blueBox text-center" (click)="sendAction(3, 0)">
+            <div [class.crossed]="board.rows[3][0] == 1">
+              12
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 1)">
+            <div [class.crossed]="board.rows[3][1] == 1">
+              11
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 2)">
+            <div [class.crossed]="board.rows[3][2] == 1">
+              10
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 3)">
+            <div [class.crossed]="board.rows[3][3] == 1">
+              9
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 4)">
+            <div [class.crossed]="board.rows[3][4] == 1">
+              8
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 5)">
+            <div [class.crossed]="board.rows[3][5] == 1">
+              7
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 6)">
+            <div [class.crossed]="board.rows[3][6] == 1">
+              6
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 7)">
+            <div [class.crossed]="board.rows[3][7] == 1">
+              5
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 8)">
+            <div [class.crossed]="board.rows[3][8] == 1">
+              4
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 9)">
+            <div [class.crossed]="board.rows[3][9] == 1">
+              3
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 10)">
+            <div [class.crossed]="board.rows[3][10] == 1">
+              2
+            </div>
+          </div>
+          <div class="blueBox text-center" (click)="sendAction(3, 11)">
+            <div [class.crossed]="board.rows[3][11] == 1">
+              L
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="whiteBox text-center" (click)="sendAction(4, 0)">
+            <div [class.crossed]="board.rows[4][0] == 1"></div>
+          </div>
+          <div class="whiteBox text-center" (click)="sendAction(4, 1)">
+            <div [class.crossed]="board.rows[4][1] == 1"></div>
+          </div>
+          <div class="whiteBox text-center" (click)="sendAction(4, 2)">
+            <div [class.crossed]="board.rows[4][2] == 1"></div>
+          </div>
+          <div class="whiteBox text-center" (click)="sendAction(4, 3)">
+            <div [class.crossed]="board.rows[4][3] == 1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

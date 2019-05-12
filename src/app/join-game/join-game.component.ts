@@ -6,19 +6,21 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-join-game',
   templateUrl: './join-game.component.html',
-  styleUrls: ['./join-game.component.css']
+  styleUrls: ['./join-game.component.css'],
 })
 export class JoinGameComponent implements OnInit {
+  public username: string;
 
-	public username: string;
+  constructor(
+    private router: Router,
+    private gameService: GameService,
+    private userService: UserService
+  ) {}
 
-  constructor(private router: Router,private gameService: GameService, private userService: UserService) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  public joinGame() {
+    this.userService.username = this.username;
+    this.router.navigate(['/game']);
   }
-
-	public joinGame(){
-	  this.userService.username = this.username;	
-		this.router.navigate(['/game']);
-	}
 }

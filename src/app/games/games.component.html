@@ -1,11 +1,10 @@
-<div id='games'>
-<button routerLink="/newGame" class="create-button btn">Create Game</button> 
-<button (click)="refresh()" class="btn create-button" style="float:right">
-	<span class="glyphicon glyphicon-refresh"></span>
-</button>
-<div *ngFor="let game of games" class="game-box">
+<div id="games">
+  <button routerLink="/newGame" class="create-button btn">Create Game</button>
+  <button (click)="refresh()" class="btn create-button" style="float:right">
+    <span class="glyphicon glyphicon-refresh"></span>
+  </button>
+  <div *ngFor="let game of games" class="game-box">
     {{ game.name }}
-		<button class='join-button' (click)="joinGame(game.id)" >Join</button>
+    <button class="join-button" (click)="joinGame(game.id)">Join</button>
+  </div>
 </div>
-</div>
-

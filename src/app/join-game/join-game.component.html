@@ -1,13 +1,17 @@
 <div class="container-fluid">
-	<div class="col-md-2">
-	</div>
-	<div class="col-md-8">
-
-		<div class="form-group">
-			<label>Username</label>
-			<input type="text" placeholder="Username" name="username" [(ngModel)]="username" class="form-control">
-		</div>
-		<button (click)="joinGame()" class="btn btn-quixx">Join Game</button>
-		<button [routerLink]="['']" class="btn btn-quixx">Back</button>
-	</div>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="form-group">
+      <label>Username</label>
+      <input
+        type="text"
+        placeholder="Username"
+        name="username"
+        [(ngModel)]="username"
+        class="form-control"
+      />
+    </div>
+    <button (click)="joinGame()" class="btn btn-quixx">Join Game</button>
+    <button [routerLink]="['']" class="btn btn-quixx">Back</button>
+  </div>
 </div>

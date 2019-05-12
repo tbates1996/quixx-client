@@ -6,20 +6,20 @@ import { Board } from '../shared/models/board.model';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
-  styleUrls: ['./board.component.css']
+  styleUrls: ['./board.component.css'],
 })
 export class BoardComponent implements OnInit {
+  @Input() board: Board;
 
-	@Input() board: Board;
-
-  constructor(private socket: SocketService, public gameService: GameService) { }
+  constructor(private socket: SocketService, public gameService: GameService) {}
 
   ngOnInit() {
-		console.log(this.board);
+    console.log(this.board);
   }
-  
-	public sendAction(row: number, col: number){
-		this.socket.send(JSON.stringify({'type': 'action', 'msg': {'row': row, 'col':col}}));
-	}
 
+  public sendAction(row: number, col: number) {
+    this.socket.send(
+      JSON.stringify({ type: 'action', msg: { row: row, col: col } })
+    );
+  }
 }

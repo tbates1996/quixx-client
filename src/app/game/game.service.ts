@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Game } from '../shared/models/game.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GameService {
-  public game: Game;	
-	public gid: string;
-  
-  constructor() { }
+  public game: Game;
+  public gid: string;
+
+  constructor() {}
 }
